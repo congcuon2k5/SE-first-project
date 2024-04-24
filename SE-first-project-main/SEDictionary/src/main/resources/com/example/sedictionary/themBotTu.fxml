@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sedictionary.themBotTu">
+   <children>
+      <TextField fx:id="tuCanThem" layoutX="59.0" layoutY="40.0" promptText="Từ cần thêm" />
+      <Button layoutX="453.0" layoutY="40.0" mnemonicParsing="false" onAction="#themTu2" text="Thêm vào từ điển" />
+      <Button layoutX="453.0" layoutY="83.0" mnemonicParsing="false" onAction="#xoaTu2" text="Xóa khỏi từ điển" />
+      <Button layoutY="1.0" mnemonicParsing="false" onAction="#quayLaiTrangChinh" text="Back" />
+      <TextField fx:id="nghiaCuaTuCanThem" layoutX="226.0" layoutY="40.0" promptText="Nghĩa" />
+      <ListView fx:id="danhSachTuDuocThem" layoutX="58.0" layoutY="83.0" onMouseEntered="#chooseWord" prefHeight="200.0" prefWidth="150.0" />
+      <WebView fx:id="nghiamoi" layoutX="226.0" layoutY="83.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
