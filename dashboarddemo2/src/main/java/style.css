@@ -67,5 +67,17 @@
 .button2:hover{
     -fx-background-color: #A3A2B7 ;
     -fx-background-radius: 10px 10px 10px 10px;
+}
+.language{
+    -fx-background-color: #A3A2B7;
+    -fx-background-radius: 5px 5px 5px 5px;
     -fx-border-color: transparent;
+}
+.btexchange{
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.btexchange:hover{
+    -fx-background-color: white;
+    -fx-background-radius: 5px 5px 5px 5px;
 }
