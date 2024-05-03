@@ -19,8 +19,18 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class themBotTu extends mainSence {
+    @Override
+    public void chuyenSangTraTu(ActionEvent event) throws IOException {
+        super.chuyenSangTraTu(event);
+    }
+
+    @Override
+    public void chuyenSangTranslate(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangTranslate(actionEvent);
+    }
+
     public void quayLaiTrangChinh(ActionEvent actionEvent) throws IOException {
-        Parent a = FXMLLoader.load(getClass().getResource("manHinhChinh.fxml"));
+        Parent a = FXMLLoader.load(getClass().getResource("My E-learning.fxml"));
         Stage b = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
         Scene c = new Scene(a);
         b.setScene(c);

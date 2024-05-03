@@ -1,10 +1,14 @@
 package com.example.sedictionary;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -19,8 +23,8 @@ import java.util.Map;
 public class mainSence extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("manHinhChinh.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 400);
+        FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("My E-learning.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("SE team");
         stage.setScene(scene);
         stage.show();
@@ -66,6 +70,32 @@ public class mainSence extends Application {
             allWord.put(part[0], part[1]);
         }
     }
-
+    public void chuyenSangTraTu(ActionEvent event) throws IOException {
+        Parent traTu = FXMLLoader.load(getClass().getResource("Dictionary.fxml"));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(traTu);
+        stage.setScene(scene);
+        Button myButton = (Button) traTu.lookup("#PhatAm");
+        myButton.setVisible(false);
+        stage.show();
+    }
+    public void chuyenSangThemBotTu(ActionEvent actionEvent) throws IOException {
+        Parent themBot = FXMLLoader.load(getClass().getResource("themBotTu.fxml"));
+        Stage b = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene c = new Scene(themBot);
+        b.setScene(c);
+        b.show();
+    }
+    public void chuyenSangTranslate(ActionEvent actionEvent) throws IOException {
+        Parent Translate = FXMLLoader.load(getClass().getResource("Translate.fxml"));
+        Stage b = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+        Scene c = new Scene(Translate);
+        b.setScene(c);
+        Label TiengAnh = (Label) Translate.lookup("#tiengAnh");
+        TiengAnh.setText("English");
+        Label TiengViet = (Label) Translate.lookup("#tiengViet");
+        TiengViet.setText("Vietnamese");
+        b.show();
+    }
 
 }

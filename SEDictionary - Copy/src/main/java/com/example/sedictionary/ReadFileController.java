@@ -30,9 +30,19 @@ import javax.speech.synthesis.SynthesizerModeDesc;
 import java.net.URL;
 
 public class ReadFileController extends mainSence {
-    public void quayLaiTrangChinh(ActionEvent actionEvent) throws IOException {
-        Parent manHinhChinh = FXMLLoader.load(getClass().getResource("manHinhChinh.fxml"));
-        Stage b = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+    @Override
+    public void chuyenSangThemBotTu(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangThemBotTu(actionEvent);
+    }
+
+    @Override
+    public void chuyenSangTranslate(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangTranslate(actionEvent);
+    }
+
+    public void quayLaiTrangChinh(MouseEvent mouseEvent) throws IOException {
+        Parent manHinhChinh = FXMLLoader.load(getClass().getResource("My E-learing.fxml"));
+        Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         Scene c = new Scene(manHinhChinh);
         b.setScene(c);
         b.show();
