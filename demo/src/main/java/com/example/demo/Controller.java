@@ -23,8 +23,8 @@ public class Controller {
 
     public void initialize() {
         imageWordMap = new HashMap<>();
-        imageWordMap.put("C:\\Code\\oop\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\dog.jpg", "dog");
-        imageWordMap.put("C:\\Code\\oop\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\cat.jpg", "cat");
+        imageWordMap.put("demo/src/main/resources/com.example.demo/Image/dog.jpg", "dog");
+        imageWordMap.put("C:\\Users\\PV\\IdeaProjects\\cloneSE\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\cat.jpg", "cat");
         loadRandomImage();
     }
 

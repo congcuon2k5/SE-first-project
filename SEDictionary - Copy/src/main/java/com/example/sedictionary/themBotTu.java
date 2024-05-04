@@ -3,16 +3,10 @@ package com.example.sedictionary;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.HTMLEditor;
-import javafx.scene.web.WebView;
-import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.*;
@@ -157,9 +151,9 @@ public class themBotTu extends mainSence {
     public boolean kiemTraCoHayKhong() throws IOException{
         String tu = tuCanSua.getText();
         if(!((EngData.get(tu) == null) && (VieData.get(tu) == null))) {
-            return false; //có
+            return false;
         }
-        return true; //không có
+        return true;
     }
 
     public void delete(ActionEvent actionEvent) throws IOException{
