@@ -40,12 +40,9 @@ public class ReadFileController extends mainSence {
         super.chuyenSangTranslate(actionEvent);
     }
 
+    @Override
     public void quayLaiTrangChinh(MouseEvent mouseEvent) throws IOException {
-        Parent manHinhChinh = FXMLLoader.load(getClass().getResource("My E-learing.fxml"));
-        Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
-        Scene c = new Scene(manHinhChinh);
-        b.setScene(c);
-        b.show();
+        super.quayLaiTrangChinh(mouseEvent);
     }
 
     @FXML
@@ -57,46 +54,15 @@ public class ReadFileController extends mainSence {
     @FXML
     private Button PhatAm;
 
-    public void setPhatAm() {
-        PhatAm.setVisible(false);
-    }
-
-    public Button getPhatAm() {
-        return PhatAm;
-    }
-
     private String tuDaTra;
     private Map<String, String> listTuDaTra = new HashMap<>();
-
-    /**
-     * hàm gán vào button để tìm từ có trong textfield.
-     * @param actionEvent an
-     */
-    /*public void search(ActionEvent actionEvent) {
+    public void search(ActionEvent actionEvent) {
         String a = tuCanTra.getText();
-        if (EngData.get(a) != null) {
-            String b = EngData.get(a);
-            nghiaCuaTu.getEngine().loadContent(b, "text/html");
-            listTuDaTra.put(a, b);
-        } else if (VieData.get(a) != null) {
-            String b = VieData.get(a);
-            nghiaCuaTu.getEngine().loadContent(b, "text/html");
-            listTuDaTra.put(a, b);
-        } *//*else if (listThem.get(a) != null) {
+        if (listThem.get(a) != null) {
             String b = listThem.get(a);
             nghiaCuaTu.getEngine().loadContent(b, "text/html");
             listTuDaTra.put(a, b);
-        }*//*
-        else {
-            thongBaoNhapSaiTu(actionEvent);
-        }
-        tuDaTra = a;
-        kiemTraCoPhaiTuTiengAnhKhong();
-    }*/
-    public void search(ActionEvent actionEvent) {
-        // Các thao tác xử lý tìm kiếm từ ở đây
-        String a = tuCanTra.getText();
-        if (EngData.get(a) != null) {
+        } else if (EngData.get(a) != null) {
             String b = EngData.get(a);
             nghiaCuaTu.getEngine().loadContent(b, "text/html");
             listTuDaTra.put(a, b);
@@ -104,11 +70,7 @@ public class ReadFileController extends mainSence {
             String b = VieData.get(a);
             nghiaCuaTu.getEngine().loadContent(b, "text/html");
             listTuDaTra.put(a, b);
-        }/* else if (listThem.get(a) != null) {
-        String b = listThem.get(a);
-        nghiaCuaTu.getEngine().loadContent(b, "text/html");
-        listTuDaTra.put(a, b);
-    }*/ else {
+        } else {
             hienThongBaoNhapSaiTu();
         }
         tuDaTra = a;
@@ -139,8 +101,7 @@ public class ReadFileController extends mainSence {
         String b = tuCanTra.getText();
         if (b.isEmpty()) {
             listTuCanTra.getItems().clear();
-            List<String> cacTuDaTra = new ArrayList<>();
-            cacTuDaTra = (List<String>) listTuDaTra.keySet().stream().filter(listTuDaTra -> listTuDaTra.startsWith("")).collect(Collectors.toList());
+            List<String> cacTuDaTra = (List<String>) listTuDaTra.keySet().stream().filter(listTuDaTra -> listTuDaTra.startsWith("")).collect(Collectors.toList());
             listTuCanTra.getItems().addAll(cacTuDaTra);
         } else {
             listTuCanTra.getItems().clear();
@@ -197,40 +158,24 @@ public class ReadFileController extends mainSence {
     }
 
     public void DoSpeech(ActionEvent event) {
-//        System.out.println(tuDaTra);
         try {
             String word = tuDaTra;
-            // Set property as Kevin Dictionary
             System.setProperty(
                     "freetts.voices",
                     "com.sun.speech.freetts.en.us"
                             + ".cmu_us_kal.KevinVoiceDirectory");
-
-            // Register Engine
             Central.registerEngineCentral(
                     "com.sun.speech.freetts"
                             + ".jsapi.FreeTTSEngineCentral");
-
-            // Create a Synthesizer
             Synthesizer synthesizer
                     = Central.createSynthesizer(
                     new SynthesizerModeDesc(Locale.US));
-
-            // Allocate synthesizer
             synthesizer.allocate();
-
-            // Resume Synthesizer
             synthesizer.resume();
-
-            // Speaks the given text
-            // until the queue is empty.
             synthesizer.speakPlainText(
                     word, null);
             synthesizer.waitEngineState(
                     Synthesizer.QUEUE_EMPTY);
-
-            // Deallocate the Synthesizer.
-            //synthesizer.deallocate();
         } catch (Exception e) {
             e.printStackTrace();
         }

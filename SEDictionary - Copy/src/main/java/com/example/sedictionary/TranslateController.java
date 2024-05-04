@@ -14,6 +14,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -29,8 +30,11 @@ public class TranslateController extends mainSence {
         super.chuyenSangThemBotTu(actionEvent);
     }
 
-    @FXML
-    private WebView meaning;
+    @Override
+    public void quayLaiTrangChinh(MouseEvent mouseEvent) throws IOException {
+        super.quayLaiTrangChinh(mouseEvent);
+    }
+
     @FXML
     private TextArea search;
     @FXML

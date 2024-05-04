@@ -10,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
@@ -17,6 +19,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Dictionary;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,7 +34,7 @@ public class mainSence extends Application {
 
         docFileAnh();
         docFileViet();
-//        docFileThemTu();
+        docFileThemTu();
     }
 
     public static void main(String[] args) {
@@ -77,6 +80,8 @@ public class mainSence extends Application {
         stage.setScene(scene);
         Button myButton = (Button) traTu.lookup("#PhatAm");
         myButton.setVisible(false);
+        WebView nghiaCuaTu = (WebView) traTu.lookup("#nghiaCuaTu");
+
         stage.show();
     }
     public void chuyenSangThemBotTu(ActionEvent actionEvent) throws IOException {
@@ -95,6 +100,19 @@ public class mainSence extends Application {
         TiengAnh.setText("English");
         Label TiengViet = (Label) Translate.lookup("#tiengViet");
         TiengViet.setText("Vietnamese");
+        TextArea translationResult = (TextArea) Translate.lookup("#translationResult");
+        translationResult.setEditable(false);
+        translationResult.setMouseTransparent(true);
+        translationResult.setWrapText(true);
+        TextArea search = (TextArea) Translate.lookup("#search");
+        search.setWrapText(true);
+        b.show();
+    }
+    public void quayLaiTrangChinh(MouseEvent mouseEvent) throws IOException {
+        Parent manHinhChinh = FXMLLoader.load(getClass().getResource("My E-learing.fxml"));
+        Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+        Scene c = new Scene(manHinhChinh);
+        b.setScene(c);
         b.show();
     }
 
