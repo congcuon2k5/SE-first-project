@@ -1,0 +1,94 @@
+.root{
+    -fx-background-color: white;
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.pane{
+    -fx-background-color: #6766CA;
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.button1{
+    -fx-text-fill: #A3A2B7;
+    -fx-background-radius: 10px 10px 10px;
+    -fx-background-color: #6766CA;
+}
+.button1:hover{
+    -fx-background-radius: 10px 10px 10px;
+    -fx-background-color: #FFFFFF;
+}
+.label {
+    -fx-text-fill: white;
+    -fx-background-color: #6766CA;
+}
+.image {
+    -fx-background-color: #6766CA;
+}
+.fonticon {
+    -fx-fill: #A3A2B7;
+}
+.vbox{
+    -fx-background-radius: 0px 0px 10px 10px;
+    -fx-background-color: white;
+}
+.label1{
+    -fx-background-color: white;
+    -fx-text-fill: #000000;
+}
+.search {
+    -fx-text-fill: #A3A2B7;
+    -fx-background-color: #A3A2B7;
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-border-color: transparent;
+}
+.search:hover{
+    -fx-background-radius: 20px 20px 20px 20px;
+    -fx-background-color: #CEAB44;
+    -fx-border-color: transparent;
+}
+.label2{
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.speech{
+    -fx-text-fill:#A3A2B7 ;
+    -fx-background-color: #A3A2B7;
+    -fx-border-color: transparent;
+}
+.speech:hover{
+    -fx-background-color: #CEAB44;
+    -fx-border-color: transparent;
+}
+.listview{
+    -fx-border-color: transparent;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.button2{
+    -fx-background-color: #CEAB44;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-border-color: transparent;
+}
+.button2:hover{
+    -fx-background-color: #A3A2B7 ;
+    -fx-background-radius: 10px 10px 10px 10px;
+}
+.language{
+    -fx-background-color: #A3A2B7;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-border-color: transparent;
+}
+.btexchange{
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.btexchange:hover{
+    -fx-background-color: white;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.btdictionary{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
+}
+.btdictionary:hover{
+    -fx-background-color: #CEAB44;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+

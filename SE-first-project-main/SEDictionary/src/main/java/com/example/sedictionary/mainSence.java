@@ -26,49 +26,38 @@ public class mainSence extends Application {
 
         docFileAnh();
         docFileViet();
-        docFile();
+        docFileThemTu();
     }
 
     public static void main(String[] args) {
         launch();
     }
-    @FXML
-    ListView<String> danhSachTuDuocThem;
-    @FXML
-    WebView nghiamoi;
-    @FXML
-    private ListView<String> listView;
     public static Map<String, String> EngData = new HashMap<>();
     public static Map<String, String> VieData = new HashMap<>();
+    public static Map<String, String> listThem = new HashMap<>();
     public void docFileAnh() throws IOException {
         FileReader doc = new FileReader("data/E_V.txt");
         BufferedReader br = new BufferedReader(doc);
         String dong;
         while ((dong = br.readLine()) != null) {
             String[] parts = dong.split("<html>");
-//            String tu = parts[0];
-//            String nghia = "<html>" + parts[1];
             EngData.put(parts[0], parts[1]);
         }
     }
     public void docFileViet() throws IOException {
-        FileReader doc = new FileReader("data/V_E.txt");
-        BufferedReader br = new BufferedReader(doc);
+        BufferedReader br = new BufferedReader(new FileReader("data/V_E.txt"));
         String dong;
         while ((dong = br.readLine()) != null) {
             String[] parts = dong.split("<html>");
-            String tu = parts[0];
-            String nghia = "<html>" + parts[1];
             VieData.put(parts[0], parts[1]);
         }
     }
-    public static Map<String, String> listThem = new HashMap<>();
-    public void docFile() throws IOException {
-        FileReader fr = new FileReader("data/testThemTu.txt");
-        BufferedReader br = new BufferedReader(fr);
-        String line;
-        while ((line = br.readLine()) != null){
-            String[] part = line.split("<html>");
+    public void docFileThemTu() throws IOException {
+        FileReader themBotTu = new FileReader("data/ThemTu.txt");
+        BufferedReader br = new BufferedReader(themBotTu);
+        String dong;
+        while ((dong = br.readLine()) != null){
+            String[] part = dong.split("<html>");
             listThem.put(part[0], part[1]);
         }
     }

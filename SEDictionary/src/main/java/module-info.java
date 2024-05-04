@@ -5,6 +5,7 @@ module com.example.sedictionary {
 
     requires com.dlsc.formsfx;
     requires com.almasb.fxgl.all;
+    requires jsapi;
 
     opens com.example.sedictionary to javafx.fxml;
     exports com.example.sedictionary;

@@ -14,12 +14,12 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
+import javax.speech.Central;
+import javax.speech.synthesis.Synthesizer;
+import javax.speech.synthesis.SynthesizerModeDesc;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class ReadFileController extends mainSence{
@@ -90,5 +90,46 @@ public class ReadFileController extends mainSence{
                 }
         );
     }
+    public void DoSpeech(ActionEvent event) {
+        try {
+            String word = tuCanTra.getText();
+            // Set property as Kevin Dictionary
+            System.setProperty(
+                    "freetts.voices",
+                    "com.sun.speech.freetts.en.us"
+                            + ".cmu_us_kal.KevinVoiceDirectory");
+
+            // Register Engine
+            Central.registerEngineCentral(
+                    "com.sun.speech.freetts"
+                            + ".jsapi.FreeTTSEngineCentral");
+
+            // Create a Synthesizer
+            Synthesizer synthesizer
+                    = Central.createSynthesizer(
+                    new SynthesizerModeDesc(Locale.US));
+
+            // Allocate synthesizer
+            synthesizer.allocate();
+
+            // Resume Synthesizer
+            synthesizer.resume();
+
+            // Speaks the given text
+            // until the queue is empty.
+            synthesizer.speakPlainText(
+                    word, null);
+            synthesizer.waitEngineState(
+                    Synthesizer.QUEUE_EMPTY);
+
+            // Deallocate the Synthesizer.
+            //synthesizer.deallocate();
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }
 

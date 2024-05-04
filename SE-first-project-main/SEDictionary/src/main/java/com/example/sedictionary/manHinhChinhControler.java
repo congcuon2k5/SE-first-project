@@ -12,23 +12,23 @@ import java.io.IOException;
 
 public class manHinhChinhControler extends mainSence {
     public void chuyenSangTraTu(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("traTu.fxml"));
+        Parent traTu = FXMLLoader.load(getClass().getResource("traTu.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(traTu);
         stage.setScene(scene);
         stage.show();
     }
     public void chuyenSangThemBotTu(ActionEvent actionEvent) throws IOException {
-        Parent d = FXMLLoader.load(getClass().getResource("themBotTu.fxml"));
+        Parent themBot = FXMLLoader.load(getClass().getResource("themBotTu.fxml"));
         Stage b = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        Scene c = new Scene(d);
+        Scene c = new Scene(themBot);
         b.setScene(c);
         b.show();
     }
     public void chuyenSangTranslate(ActionEvent actionEvent) throws IOException {
-        Parent a = FXMLLoader.load(getClass().getResource("Translate.fxml"));
+        Parent Translate = FXMLLoader.load(getClass().getResource("Translate.fxml"));
         Stage b = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-        Scene c = new Scene(a);
+        Scene c = new Scene(Translate);
         b.setScene(c);
         b.show();
     }
