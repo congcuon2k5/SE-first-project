@@ -89,6 +89,8 @@ public class mainSence extends Application {
         Stage b = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene c = new Scene(themBot);
         b.setScene(c);
+        ListView goiYTu = (ListView) themBot.lookup("#listTuCanSua");
+        goiYTu.setVisible(false);
         b.show();
     }
     public void chuyenSangTranslate(ActionEvent actionEvent) throws IOException {

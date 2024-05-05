@@ -40,11 +40,13 @@ public class themBotTu extends mainSence {
     public void searchWordThatNeedToFix(KeyEvent keyEvent) {
         String tu = tuCanSua.getText();
         if (tu.isEmpty()) {
-            listTuCanSua.getItems().clear();
+            listTuCanSua.setVisible(false);
+            /*listTuCanSua.getItems().clear();
             List<String> cacTuDaTra = new ArrayList<>();
             cacTuDaTra = (List<String>) listTuDaTra.keySet().stream().filter(listTuDaTra -> listTuDaTra.startsWith("")).collect(Collectors.toList());
-            listTuCanSua.getItems().addAll(cacTuDaTra);
+            listTuCanSua.getItems().addAll(cacTuDaTra);*/
         } else {
+            listTuCanSua.setVisible(true);
             listTuCanSua.getItems().clear();
             List<String> collect = (List<String>) EngData.keySet().stream().filter(EngData -> EngData.startsWith(tu)).collect(Collectors.toList());
             List<String> collect1 = (List<String>) VieData.keySet().stream().filter(VieData -> VieData.startsWith(tu)).collect(Collectors.toList());
