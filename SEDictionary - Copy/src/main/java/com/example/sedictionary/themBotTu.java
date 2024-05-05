@@ -34,17 +34,12 @@ public class themBotTu extends mainSence {
     private HTMLEditor suaTu;
     @FXML
     private ListView<String> listTuCanSua;
-    private Map<String, String> listTuDaTra = new HashMap<>();
 
 
     public void searchWordThatNeedToFix(KeyEvent keyEvent) {
         String tu = tuCanSua.getText();
         if (tu.isEmpty()) {
             listTuCanSua.setVisible(false);
-            /*listTuCanSua.getItems().clear();
-            List<String> cacTuDaTra = new ArrayList<>();
-            cacTuDaTra = (List<String>) listTuDaTra.keySet().stream().filter(listTuDaTra -> listTuDaTra.startsWith("")).collect(Collectors.toList());
-            listTuCanSua.getItems().addAll(cacTuDaTra);*/
         } else {
             listTuCanSua.setVisible(true);
             listTuCanSua.getItems().clear();
@@ -54,6 +49,9 @@ public class themBotTu extends mainSence {
             listTuCanSua.getItems().addAll(collect);
             listTuCanSua.getItems().addAll(collect1);
             listTuCanSua.getItems().addAll(collect2);
+            if(collect1.isEmpty() && collect.isEmpty() && collect2.isEmpty()){
+                listTuCanSua.setVisible(false);
+            }
         }
     }
 
@@ -185,6 +183,7 @@ public class themBotTu extends mainSence {
             tuCanSua.setText("");
             suaTu.setHtmlText("");
             listTuCanSua.getItems().clear();
+            listTuCanSua.setVisible(false);
         }
     }
     public void xoa() throws IOException{

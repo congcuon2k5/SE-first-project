@@ -85,7 +85,7 @@ public class mainSence extends Application {
         stage.show();
     }
     public void chuyenSangThemBotTu(ActionEvent actionEvent) throws IOException {
-        Parent themBot = FXMLLoader.load(getClass().getResource("themBotTu.fxml"));
+        Parent themBot = FXMLLoader.load(getClass().getResource("Fix.fxml"));
         Stage b = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
         Scene c = new Scene(themBot);
         b.setScene(c);
@@ -111,7 +111,7 @@ public class mainSence extends Application {
         b.show();
     }
     public void quayLaiTrangChinh(MouseEvent mouseEvent) throws IOException {
-        Parent manHinhChinh = FXMLLoader.load(getClass().getResource("My E-learing.fxml"));
+        Parent manHinhChinh = FXMLLoader.load(getClass().getResource("My E-learning.fxml"));
         Stage b = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         Scene c = new Scene(manHinhChinh);
         b.setScene(c);

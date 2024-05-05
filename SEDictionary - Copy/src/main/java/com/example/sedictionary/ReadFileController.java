@@ -197,12 +197,14 @@ public class ReadFileController extends mainSence {
     }
 
     public void chuyenSangThemTuScene() throws IOException {
-        Parent themBot = FXMLLoader.load(getClass().getResource("themBotTu.fxml"));
+        Parent themBot = FXMLLoader.load(getClass().getResource("Fix.fxml"));
         Stage stage = (Stage) tuCanTra.getScene().getWindow();
         Scene scene = new Scene(themBot);
         stage.setScene(scene);
         TextField truyen = (TextField) themBot.lookup("#tuCanSua");
         truyen.setText(tuCanTra.getText());
+        ListView goiYTu = (ListView) themBot.lookup("#listTuCanSua");
+        goiYTu.setVisible(false);
         stage.show();
     }
 
