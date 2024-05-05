@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="774.0" styleClass="root" stylesheets="@../../../../java/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="774.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane prefHeight="519.0" prefWidth="212.0" styleClass="pane">
             <children>
@@ -22,7 +22,7 @@
                         <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="199.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
+                <Button alignment="CENTER" layoutX="29.0" layoutY="199.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="bttranslate" text="Translate">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>

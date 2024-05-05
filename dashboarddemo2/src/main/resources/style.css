@@ -87,8 +87,23 @@
     -fx-background-radius: 5px 5px 5px 5px;
     -fx-text-fill: #A3A2B7;
 }
-.btdictionary:hover{
-    -fx-background-color: #CEAB44;
+.bttranslate{
+    -fx-background-color: #FFFFFF;
     -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
 }
-
+.btfix{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
+}
+.btpractice{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
+}
+.btabout{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
+}
