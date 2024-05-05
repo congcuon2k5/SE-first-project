@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="774.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <Pane prefHeight="519.0" prefWidth="212.0" styleClass="pane">
+        <Pane layoutX="-10.0" prefHeight="570.0" prefWidth="226.0" styleClass="pane">
             <children>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="127.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="btdictionary" text="Dictionary" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -21,7 +21,7 @@
                         <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="199.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -29,7 +29,7 @@
                         <FontAwesomeIcon glyphName="EXCHANGE" selectionFill="#e2dede" styleClass="fonticon" tabSize="30" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="29.0" layoutY="270.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Practice">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="296.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="btpractice" text="Practice">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -37,7 +37,7 @@
                         <FontAwesomeIcon glyphName="GAMEPAD" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" text="" />
                     </graphic>
                 </Button>
-                <Label alignment="CENTER" layoutX="-2.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
+                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
@@ -45,7 +45,7 @@
                         <FontAwesomeIcon fill="#daba88" glyphName="HOME" selectionFill="#fdf8f8" size="25" tabSize="0" text="" />
                     </graphic>
                 </Label>
-                <Button alignment="CENTER" layoutX="22.0" layoutY="408.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="About">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="456.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="About">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -53,7 +53,7 @@
                         <FontAwesomeIcon glyphName="USERS" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="22.0" layoutY="343.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -63,13 +63,13 @@
                 </Button>
             </children>
         </Pane>
-        <AnchorPane layoutX="214.0" layoutY="3.0" prefHeight="513.0" prefWidth="546.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
+        <AnchorPane layoutX="214.0" layoutY="3.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
             <children>
-                <VBox layoutX="28.0" prefHeight="109.0" prefWidth="490.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
+                <VBox layoutX="28.0" prefHeight="130.0" prefWidth="516.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
                     <children>
-                        <Label prefHeight="22.0" prefWidth="135.0" styleClass="label1" text="Dashboard">
+                        <Label prefHeight="24.0" prefWidth="165.0" styleClass="label1" text="Dashboard">
                             <font>
-                                <Font name="Eras Bold ITC" size="17.0" />
+                                <Font name="Eras Bold ITC" size="20.0" />
                             </font>
                             <padding>
                                 <Insets left="25.0" />
@@ -78,9 +78,9 @@
                                 <Insets top="15.0" />
                             </VBox.margin>
                         </Label>
-                        <Label prefHeight="18.0" prefWidth="197.0" styleClass="label1" text="Welcom to my E-learning !">
+                        <Label prefHeight="19.0" prefWidth="232.0" styleClass="label1" text="Welcome to my E-learning !">
                             <font>
-                                <Font name="Imprint MT Shadow" size="15.0" />
+                                <Font name="Imprint MT Shadow" size="16.0" />
                             </font>
                             <VBox.margin>
                                 <Insets top="20.0" />
