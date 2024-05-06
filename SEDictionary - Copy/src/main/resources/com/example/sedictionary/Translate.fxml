@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sedictionary.TranslateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="-10.0" prefHeight="600.0" prefWidth="226.0" styleClass="pane">
+      <Pane layoutX="-10.0" prefHeight="570.0" prefWidth="226.0" styleClass="pane">
          <children>
-            <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" onAction="#chuyenSangTraTu" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
+            <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
                <font>
                   <Font name="Century" size="18.0" />
                </font>
@@ -38,7 +38,7 @@
                   <FontAwesomeIcon glyphName="GAMEPAD" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" text="" />
                </graphic>
             </Button>
-            <Label alignment="CENTER" layoutX="15.0" layoutY="21.0" onMouseClicked="#quayLaiTrangChinh" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
+            <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
                <font>
                   <Font name="Comic Sans MS" size="24.0" />
                </font>
@@ -54,7 +54,7 @@
                   <FontAwesomeIcon glyphName="USERS" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" />
                </graphic>
             </Button>
-            <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" onAction="#chuyenSangThemBotTu" prefHeight="35.0" prefWidth="148.0" styleClass="btfix" text="Fix">
+            <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="btfix" text="Fix">
                <font>
                   <Font name="Century" size="18.0" />
                </font>
@@ -64,9 +64,9 @@
             </Button>
          </children>
       </Pane>
-      <AnchorPane layoutX="216.8" prefHeight="600.0" prefWidth="569.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="217.0" AnchorPane.rightAnchor="14.0">
+      <AnchorPane layoutX="212.0" layoutY="3.0" prefHeight="570.0" prefWidth="582.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="6.0">
          <children>
-            <VBox layoutX="28.0" prefHeight="120.0" prefWidth="520.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.799999999999955">
+            <VBox layoutX="28.0" prefHeight="120.0" prefWidth="520.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
                <children>
                   <Label prefHeight="24.0" prefWidth="175.0" styleClass="label1" text="Dashboard">
                      <font>
@@ -92,12 +92,12 @@
                   </Label>
                </children>
             </VBox>
-            <TextArea fx:id="search" layoutX="8.0" layoutY="200.0" onKeyPressed="#keyPressed" prefHeight="343.0" prefWidth="251.0" promptText="Enter text here" AnchorPane.bottomAnchor="63.19999999999993" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="200.0" />
-            <TextArea fx:id="translationResult" layoutX="290.0" layoutY="200.0" prefHeight="343.0" prefWidth="283.0" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="9.199999999999932" AnchorPane.topAnchor="200.0" />
-            <Button layoutX="175.0" layoutY="507.0" mnemonicParsing="false" onAction="#trans" prefHeight="35.0" prefWidth="83.0" styleClass="button2" text="Translate" />
-            <Label fx:id="tiengAnh" layoutX="8.0" layoutY="177.0" prefHeight="22.0" prefWidth="77.0" styleClass="language" text="English" textFill="#120101" />
-            <Label fx:id="tiengViet" layoutX="291.0" layoutY="176.0" prefHeight="25.0" prefWidth="77.0" styleClass="language" text="Vietnamese" />
-            <Button layoutX="259.0" layoutY="394.0" mnemonicParsing="false" onAction="#swich" prefHeight="25.0" prefWidth="33.0" styleClass="btexchange">
+            <TextArea layoutX="8.0" layoutY="223.0" prefHeight="318.0" prefWidth="251.0" promptText="Enter text here" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="223.0" />
+            <TextArea layoutX="290.0" layoutY="223.0" prefHeight="318.0" prefWidth="284.0" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="223.0" />
+            <Button layoutX="176.0" layoutY="490.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="83.0" styleClass="button2" text="Translate" />
+            <Label layoutX="8.0" layoutY="189.0" prefHeight="22.0" prefWidth="77.0" styleClass="language" text="English" textFill="#120101" />
+            <Label layoutX="290.0" layoutY="188.0" prefHeight="25.0" prefWidth="77.0" styleClass="language" text="Vietnamese" />
+            <Button layoutX="259.0" layoutY="394.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="33.0" styleClass="btexchange">
                <graphic>
                   <FontAwesomeIcon glyphName="EXCHANGE" size="15" />
                </graphic>

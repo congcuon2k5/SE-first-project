@@ -4,7 +4,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -12,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.HTMLEditor?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sedictionary.themBotTu">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <AnchorPane layoutX="216.0" prefHeight="600.0" prefWidth="569.0" style="-fx-background-color: #F3F3F3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="15.0">
+        <AnchorPane layoutX="214.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #F3F3F3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
             <children>
                 <VBox layoutX="28.0" prefHeight="120.0" prefWidth="520.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
                     <children>
@@ -42,22 +41,21 @@
                         </Label>
                     </children>
                 </VBox>
-                <TextField fx:id="tuCanSua" layoutX="396.0" layoutY="133.0" onKeyTyped="#searchWordThatNeedToFix" prefHeight="35.0" prefWidth="148.0" promptText="Enter text here" styleClass="labelfix" AnchorPane.leftAnchor="396.0" />
-                <HTMLEditor fx:id="suaTu" htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="11.2" layoutY="186.0" prefHeight="363.0" prefWidth="547.0" styleClass="htmleditor" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="186.0" />
-                <Button layoutX="344.0" layoutY="555.0" mnemonicParsing="false" onAction="#delete" prefHeight="30.0" prefWidth="80.0" styleClass="savedelete" text="Delete">
+                <TextField layoutX="396.0" layoutY="133.0" prefHeight="35.0" prefWidth="148.0" promptText="Enter text here" styleClass="labelfix" AnchorPane.leftAnchor="396.0" />
+                <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" layoutX="10.0" layoutY="186.0" prefHeight="314.0" prefWidth="560.0" styleClass="htmleditor" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="186.0" />
+                <Button layoutX="345.0" layoutY="512.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="savedelete" text="Delete">
                     <graphic>
                         <FontAwesomeIcon glyphName="TRASH" size="15" text="" />
                     </graphic></Button>
-                <Button layoutX="481.0" layoutY="555.0" mnemonicParsing="false" onAction="#save" prefHeight="30.0" prefWidth="80.0" styleClass="savedelete" text="Save">
+                <Button layoutX="478.0" layoutY="512.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="savedelete" text="Save">
                     <graphic>
                         <FontAwesomeIcon glyphName="SAVE" size="15" />
                     </graphic></Button>
-            <ListView fx:id="listTuCanSua" layoutX="396.0" layoutY="168.0" onMouseEntered="#chonTuDeSua" prefHeight="200.0" prefWidth="169.0" />
             </children>
         </AnchorPane>
-        <Pane layoutX="-10.0" prefHeight="600.0" prefWidth="226.0" styleClass="pane">
+        <Pane layoutX="-10.0" prefHeight="570.0" prefWidth="226.0" styleClass="pane">
             <children>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" onAction="#chuyenSangTraTu" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -65,7 +63,7 @@
                         <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" onAction="#chuyenSangTranslate" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -81,7 +79,7 @@
                         <FontAwesomeIcon glyphName="GAMEPAD" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" text="" />
                     </graphic>
                 </Button>
-                <Label alignment="CENTER" layoutX="15.0" layoutY="21.0" onMouseClicked="#quayLaiTrangChinh" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
+                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
