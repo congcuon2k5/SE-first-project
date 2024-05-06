@@ -3,16 +3,10 @@ package com.example.sedictionary;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.HTMLEditor;
-import javafx.scene.web.WebView;
-import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.*;
@@ -40,17 +34,14 @@ public class themBotTu extends mainSence {
     private HTMLEditor suaTu;
     @FXML
     private ListView<String> listTuCanSua;
-    private Map<String, String> listTuDaTra = new HashMap<>();
 
 
     public void searchWordThatNeedToFix(KeyEvent keyEvent) {
         String tu = tuCanSua.getText();
         if (tu.isEmpty()) {
-            listTuCanSua.getItems().clear();
-            List<String> cacTuDaTra = new ArrayList<>();
-            cacTuDaTra = (List<String>) listTuDaTra.keySet().stream().filter(listTuDaTra -> listTuDaTra.startsWith("")).collect(Collectors.toList());
-            listTuCanSua.getItems().addAll(cacTuDaTra);
+            listTuCanSua.setVisible(false);
         } else {
+            listTuCanSua.setVisible(true);
             listTuCanSua.getItems().clear();
             List<String> collect = (List<String>) EngData.keySet().stream().filter(EngData -> EngData.startsWith(tu)).collect(Collectors.toList());
             List<String> collect1 = (List<String>) VieData.keySet().stream().filter(VieData -> VieData.startsWith(tu)).collect(Collectors.toList());
@@ -58,6 +49,9 @@ public class themBotTu extends mainSence {
             listTuCanSua.getItems().addAll(collect);
             listTuCanSua.getItems().addAll(collect1);
             listTuCanSua.getItems().addAll(collect2);
+            if(collect1.isEmpty() && collect.isEmpty() && collect2.isEmpty()){
+                listTuCanSua.setVisible(false);
+            }
         }
     }
 
@@ -157,9 +151,9 @@ public class themBotTu extends mainSence {
     public boolean kiemTraCoHayKhong() throws IOException{
         String tu = tuCanSua.getText();
         if(!((EngData.get(tu) == null) && (VieData.get(tu) == null))) {
-            return false; //có
+            return false;
         }
-        return true; //không có
+        return true;
     }
 
     public void delete(ActionEvent actionEvent) throws IOException{
@@ -189,6 +183,7 @@ public class themBotTu extends mainSence {
             tuCanSua.setText("");
             suaTu.setHtmlText("");
             listTuCanSua.getItems().clear();
+            listTuCanSua.setVisible(false);
         }
     }
     public void xoa() throws IOException{

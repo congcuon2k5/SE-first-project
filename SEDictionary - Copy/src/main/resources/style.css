@@ -17,6 +17,7 @@
 }
 .label {
     -fx-text-fill: white;
+    -fx-background-color: #6766CA;
 }
 .image {
     -fx-background-color: #6766CA;
@@ -33,7 +34,7 @@
     -fx-text-fill: #000000;
 }
 .search {
-    -fx-text-fill: #A3A2B7;
+    -fx-text-fill: #a2a3b7;
     -fx-background-color: #A3A2B7;
     -fx-background-radius: 20px 20px 20px 20px;
     -fx-border-color: transparent;
@@ -67,5 +68,72 @@
 .button2:hover{
     -fx-background-color: #A3A2B7 ;
     -fx-background-radius: 10px 10px 10px 10px;
+}
+.language{
+    -fx-background-color: #A3A2B7;
+    -fx-background-radius: 5px 5px 5px 5px;
     -fx-border-color: transparent;
 }
+.btexchange{
+    -fx-background-color: #F3F3F3;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.btexchange:hover{
+    -fx-background-color: white;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.btdictionary{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
+}
+.bttranslate{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #A3A2B7;
+}
+.btfix{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-text-fill: #A3A2B7;
+}
+.btpractice{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-text-fill: #A3A2B7;
+}
+.btabout{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-text-fill: #A3A2B7;
+}
+btstart {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-text-fill: #A3A2B7;
+}
+.btstart:hover{
+    -fx-background-color: #CEAB44;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-text-fill: #A3A2B7;
+}
+.htmleditor{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #A3A2B7;
+    -fx-border-width: 5px;
+}
+.labelfix{
+    -fx-border-color: transparent;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.savedelete{
+    -fx-background-color: #A2A3B7;
+    -fx-border-color: transparent;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.savedelete:hover{
+    -fx-background-color: #CEAB44;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-border-color: transparent;
+}
+

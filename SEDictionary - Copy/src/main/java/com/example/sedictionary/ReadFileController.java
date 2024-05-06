@@ -3,7 +3,6 @@ package com.example.sedictionary;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -12,18 +11,11 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
 import org.json.simple.parser.ParseException;
-
 import javax.speech.Central;
 import javax.speech.synthesis.Synthesizer;
 import javax.speech.synthesis.SynthesizerModeDesc;
@@ -55,7 +47,7 @@ public class ReadFileController extends mainSence {
     private Button PhatAm;
 
     private String tuDaTra;
-    private Map<String, String> listTuDaTra = new HashMap<>();
+    private Map<String, String> listTuDaTra = new LinkedHashMap<>();
     public void search(ActionEvent actionEvent) {
         String a = tuCanTra.getText();
         if (listThem.get(a) != null) {
@@ -102,6 +94,7 @@ public class ReadFileController extends mainSence {
         if (b.isEmpty()) {
             listTuCanTra.getItems().clear();
             List<String> cacTuDaTra = (List<String>) listTuDaTra.keySet().stream().filter(listTuDaTra -> listTuDaTra.startsWith("")).collect(Collectors.toList());
+            Collections.reverse(cacTuDaTra);
             listTuCanTra.getItems().addAll(cacTuDaTra);
         } else {
             listTuCanTra.getItems().clear();
@@ -204,12 +197,14 @@ public class ReadFileController extends mainSence {
     }
 
     public void chuyenSangThemTuScene() throws IOException {
-        Parent themBot = FXMLLoader.load(getClass().getResource("themBotTu.fxml"));
+        Parent themBot = FXMLLoader.load(getClass().getResource("Fix.fxml"));
         Stage stage = (Stage) tuCanTra.getScene().getWindow();
         Scene scene = new Scene(themBot);
         stage.setScene(scene);
         TextField truyen = (TextField) themBot.lookup("#tuCanSua");
         truyen.setText(tuCanTra.getText());
+        ListView goiYTu = (ListView) themBot.lookup("#listTuCanSua");
+        goiYTu.setVisible(false);
         stage.show();
     }
 
