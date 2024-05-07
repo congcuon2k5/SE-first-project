@@ -2,12 +2,18 @@ package com.example.sedictionary;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.*;
@@ -33,15 +39,19 @@ public class PracticeController extends mainSence {
         super.chuyenSangThemBotTu(actionEvent);
     }
 
+    @Override
+    public void chuyenSangAbout(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangAbout(actionEvent);
+    }
+
     @FXML
     private ImageView imageView;
 
     @FXML
     private TextField wordField;
     private String pathOfView;
-/*
     private Map<String, String> imageWordMap = new HashMap<>();
-    private List<String> displayedImages = new ArrayList<>();*/
+    private List<String> displayedImages = new ArrayList<>();
 
     public void initialize() {
 
@@ -68,9 +78,9 @@ public class PracticeController extends mainSence {
         imageWordMap.put("Image/musical instrument/maracas.jpg", "maracas");
 
         imageWordMap.put("Image/colors and shapes/square.jpg", "square");
-        imageWordMap.put("Image/colors and shapes/rectangle.jpg", "rectangle");
+        //imageWordMap.put("Image/colors and shapes/rectangle.jpg", "rectangle");
         imageWordMap.put("Image/colors and shapes/trapezoid.jpg", "trapezoid");
-        imageWordMap.put("Image/colors and shapes/parallelogram.jpg", "parallelogram");
+        //imageWordMap.put("Image/colors and shapes/parallelogram.jpg", "parallelogram");
         imageWordMap.put("Image/colors and shapes/triangle.jpg", "triangle");
         imageWordMap.put("Image/colors and shapes/lozenge.jpg", "lozenge");
         imageWordMap.put("Image/colors and shapes/circle.jpg", "circle");
@@ -107,8 +117,23 @@ public class PracticeController extends mainSence {
                 displayedImages.add(randomImagePath);
                 System.out.println(randomImagePath);
         } else {
-            showAlert("Info", "You have completed the game!");
+//            showAlert("Info", "You have completed the game!");
+            Alert thongBaoHoanThanh = new Alert(Alert.AlertType.INFORMATION);
+            thongBaoHoanThanh.setTitle("Delete word");
+            thongBaoHoanThanh.setHeaderText("Do you want to delete this word?");
+            thongBaoHoanThanh.setContentText("Once deleted, you will not be able to look up this word again!");
+            Optional<ButtonType> ok = thongBaoHoanThanh.showAndWait();
+            if (ok.get() == ButtonType.OK) {
+                try {
+                    quayLaiStart();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+    }
+    public void quayLaiStart() throws IOException {
+        chuyenSangPractice(new ActionEvent());
     }
 
 

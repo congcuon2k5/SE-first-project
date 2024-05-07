@@ -42,6 +42,11 @@ public class ReadFileController extends mainSence {
         super.chuyenSangPractice(actionEvent);
     }
 
+    @Override
+    public void chuyenSangAbout(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangAbout(actionEvent);
+    }
+
     @FXML
     private ListView<String> listTuCanTra;
     @FXML

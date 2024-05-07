@@ -25,6 +25,7 @@ public class mainSence extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("My E-learning.fxml"));
+//        FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("game.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("SE team");
         stage.setScene(scene);
@@ -33,7 +34,6 @@ public class mainSence extends Application {
         docFileAnh();
         docFileViet();
         docFileThemTu();
-        test();
     }
 
     public static void main(String[] args) {
@@ -117,16 +117,17 @@ public class mainSence extends Application {
         b.show();
     }
     public void chuyenSangPractice(ActionEvent actionEvent) throws IOException {
-        Parent game = FXMLLoader.load(getClass().getResource("game.fxml"));
+        Parent game = FXMLLoader.load(getClass().getResource("PracticeStart.fxml"));
         Stage b = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         Scene c = new Scene(game);
         b.setScene(c);
         b.show();
     }
-
-    public static Map<String, String> imageWordMap = new HashMap<>();
-    public static List<String> displayedImages = new ArrayList<>();
-    public void test(){
-        imageWordMap.put("Image/animal/zebra.jpg", "zebra");
+    public void chuyenSangAbout(ActionEvent actionEvent) throws IOException {
+        Parent about = FXMLLoader.load(getClass().getResource("About.fxml"));
+        Stage b = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene c = new Scene(about);
+        b.setScene(c);
+        b.show();
     }
 }
