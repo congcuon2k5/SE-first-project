@@ -139,8 +139,9 @@ btstart {
 .hboxgame{
     -fx-background-color: white;
     -fx-background-radius: 10px 10px 10px 10px;
-    -fx-border-color: transparent;
+    -fx-border-color: #a2a3b7;
     -fx-border-width: 10px 10px 10px 10px;
+    -fx-border-radius: 10px 10px 10px 10px;
 }
 .labelrule {
     -fx-background-color: white;
