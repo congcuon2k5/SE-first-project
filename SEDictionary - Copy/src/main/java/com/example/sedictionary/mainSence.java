@@ -19,9 +19,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Dictionary;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class mainSence extends Application {
     @Override
@@ -35,6 +33,7 @@ public class mainSence extends Application {
         docFileAnh();
         docFileViet();
         docFileThemTu();
+        test();
     }
 
     public static void main(String[] args) {
@@ -117,5 +116,17 @@ public class mainSence extends Application {
         b.setScene(c);
         b.show();
     }
+    public void chuyenSangPractice(ActionEvent actionEvent) throws IOException {
+        Parent game = FXMLLoader.load(getClass().getResource("game.fxml"));
+        Stage b = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        Scene c = new Scene(game);
+        b.setScene(c);
+        b.show();
+    }
 
+    public static Map<String, String> imageWordMap = new HashMap<>();
+    public static List<String> displayedImages = new ArrayList<>();
+    public void test(){
+        imageWordMap.put("Image/animal/zebra.jpg", "zebra");
+    }
 }

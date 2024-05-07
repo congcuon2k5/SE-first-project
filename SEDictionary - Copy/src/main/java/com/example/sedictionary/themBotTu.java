@@ -28,6 +28,11 @@ public class themBotTu extends mainSence {
         super.quayLaiTrangChinh(mouseEvent);
     }
 
+    @Override
+    public void chuyenSangPractice(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangPractice(actionEvent);
+    }
+
     @FXML
     private TextField tuCanSua;
     @FXML
