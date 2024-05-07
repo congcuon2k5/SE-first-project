@@ -4,6 +4,9 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -63,7 +66,7 @@
                 </Button>
             </children>
         </Pane>
-        <AnchorPane layoutX="214.0" layoutY="3.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
+        <AnchorPane layoutX="216.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="12.0">
             <children>
                 <VBox layoutX="28.0" prefHeight="130.0" prefWidth="516.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
                     <children>
@@ -91,6 +94,26 @@
                         </Label>
                     </children>
                 </VBox>
+            <AnchorPane layoutX="26.0" layoutY="156.0" prefHeight="400.0" prefWidth="520.0" styleClass="anchorPane1">
+               <children>
+                  <AnchorPane layoutX="57.0" layoutY="36.0" prefHeight="329.0" prefWidth="409.0" styleClass="anchorPane2" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="36.0">
+                     <children>
+                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="111.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <TextField layoutX="136.0" layoutY="235.0" promptText="Enter the answer" style="-fx-background-radius: 5px 5px 5px 5px; -fx-border-color: transparent;" />
+                        <Button layoutX="152.0" layoutY="277.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" styleClass="btcheck" text="Check" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="464.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" styleClass="btexit">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../../../../Users/PC/Downloads/Free%20Exit%20Logout%20PNG,%20SVG%20Icon.jpg" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
             </children>
         </AnchorPane>
     </children>

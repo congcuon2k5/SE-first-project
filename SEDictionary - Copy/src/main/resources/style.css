@@ -176,3 +176,39 @@ btstart {
     -fx-text-fill: #6766ca;
     -fx-background-radius: 5px 5px 5px 5px;
 }
+.anchorPane1{
+    -fx-background-color: #57a375;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
+.anchorPane2{
+    -fx-background-color: white;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-border-with: 10px 10px 10px 10px;
+    -fx-border-radius: 5px 5px 5px 5px;
+}
+.label5{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+.btcheck{
+    -fx-background-color: #a3a2b7;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-border-color: transparent;
+    -fx-text-fill: #000000;
+}
+.btcheck:hover{
+    -fx-background-color: #CEAB44;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-border-color: transparent;
+    -fx-text-fill: #000000;
+}
+.btexit{
+    -fx-background-color: white;
+    -fx-background-radius: 8px 8px 8px 8px;
+    -fx-border-color: transparent;
+}
+.btexit:hover{
+    -fx-background-color: #CEAB44;
+    -fx-background-radius: 8px 8px 8px 8px;
+    -fx-border-color: transparent;
+}

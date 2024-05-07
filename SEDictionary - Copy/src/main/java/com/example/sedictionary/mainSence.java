@@ -26,12 +26,11 @@ import java.util.Map;
 public class mainSence extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("My E-learning.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("PracticeStart.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("SE team");
         stage.setScene(scene);
         stage.show();
-
         docFileAnh();
         docFileViet();
         docFileThemTu();
