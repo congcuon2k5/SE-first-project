@@ -161,3 +161,18 @@ btstart {
     -fx-background-radius: 10px 10px 10px 10px;
     -fx-text-fill: #000000;
 }
+.labelabout{
+    -fx-background-color: white;
+    -fx-background-radius: 5px 5px 5px 5px;
+    -fx-border-color: #a3a2b7;
+    -fx-text-fill: red;
+    -fx-border-radius: 5px 5px 5px 5px;
+}
+.label4{
+    -fx-background-color: #a2b3d7;
+    -fx-border-color: transparent;
+    -fx-border-width: 5px 5px 5px 5px;
+    -fx-border-radius: 5px 5px 5px 5px;
+    -fx-text-fill: #6766ca;
+    -fx-background-radius: 5px 5px 5px 5px;
+}
