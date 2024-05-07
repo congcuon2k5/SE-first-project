@@ -1,120 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <Pane layoutX="-10.0" prefHeight="570.0" prefWidth="226.0" styleClass="pane">
-            <children>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
-                    <font>
-                        <Font name="Century" size="18.0" />
-                    </font>
-                    <graphic>
-                        <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
-                    </graphic>
-                </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
-                    <font>
-                        <Font name="Century" size="18.0" />
-                    </font>
-                    <graphic>
-                        <FontAwesomeIcon glyphName="EXCHANGE" selectionFill="#e2dede" styleClass="fonticon" tabSize="30" text="" />
-                    </graphic>
-                </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="296.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="btpractice" text="Practice">
-                    <font>
-                        <Font name="Century" size="18.0" />
-                    </font>
-                    <graphic>
-                        <FontAwesomeIcon glyphName="GAMEPAD" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" text="" />
-                    </graphic>
-                </Button>
-                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
-                    <font>
-                        <Font name="Comic Sans MS" size="24.0" />
-                    </font>
-                    <graphic>
-                        <FontAwesomeIcon fill="#daba88" glyphName="HOME" selectionFill="#fdf8f8" size="25" tabSize="0" text="" />
-                    </graphic>
-                </Label>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="456.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="About">
-                    <font>
-                        <Font name="Century" size="18.0" />
-                    </font>
-                    <graphic>
-                        <FontAwesomeIcon glyphName="USERS" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" />
-                    </graphic>
-                </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
-                    <font>
-                        <Font name="Century" size="18.0" />
-                    </font>
-                    <graphic>
-                        <FontAwesomeIcon glyphName="WRENCH" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" wrappingWidth="20.5" />
-                    </graphic>
-                </Button>
-            </children>
-        </Pane>
-        <AnchorPane layoutX="216.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="12.0">
-            <children>
-                <VBox layoutX="28.0" prefHeight="130.0" prefWidth="516.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
-                    <children>
-                        <Label prefHeight="24.0" prefWidth="165.0" styleClass="label1" text="Dashboard">
-                            <font>
-                                <Font name="Eras Bold ITC" size="20.0" />
-                            </font>
-                            <padding>
-                                <Insets left="25.0" />
-                            </padding>
-                            <VBox.margin>
-                                <Insets top="15.0" />
-                            </VBox.margin>
-                        </Label>
-                        <Label prefHeight="19.0" prefWidth="232.0" styleClass="label1" text="Welcome to my E-learning !">
-                            <font>
-                                <Font name="Imprint MT Shadow" size="16.0" />
-                            </font>
-                            <VBox.margin>
-                                <Insets top="20.0" />
-                            </VBox.margin>
-                            <padding>
-                                <Insets left="20.0" />
-                            </padding>
-                        </Label>
-                    </children>
-                </VBox>
-            <AnchorPane layoutX="26.0" layoutY="156.0" prefHeight="400.0" prefWidth="520.0" styleClass="anchorPane1">
-               <children>
-                  <AnchorPane layoutX="57.0" layoutY="36.0" prefHeight="329.0" prefWidth="409.0" styleClass="anchorPane2" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="57.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="36.0">
-                     <children>
-                        <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="111.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-                        <TextField layoutX="136.0" layoutY="235.0" promptText="Enter the answer" style="-fx-background-radius: 5px 5px 5px 5px; -fx-border-color: transparent;" />
-                        <Button layoutX="152.0" layoutY="277.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="119.0" styleClass="btcheck" text="Check" />
-                     </children>
-                  </AnchorPane>
-                  <Button layoutX="464.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" styleClass="btexit">
-                     <graphic>
-                        <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../../../../../../Users/PC/Downloads/Free%20Exit%20Logout%20PNG,%20SVG%20Icon.jpg" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            </children>
-        </AnchorPane>
-    </children>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="521.0" prefWidth="668.0" styleClass="anchorPane3" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="82.0" layoutY="82.0" prefHeight="359.0" prefWidth="506.0" styleClass="panegame" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="81.0" AnchorPane.topAnchor="81.0">
+         <children>
+            <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="129.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField layoutX="179.0" layoutY="276.0" promptText="Enter the answer: " />
+            <Button layoutX="208.0" layoutY="311.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="98.0" styleClass="btcheck" text="Check">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="402.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="249.0" AnchorPane.rightAnchor="14.0">
+               <image>
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/Meme%20là%20gì_%20300+%20meme%20hài,%20chất%20nhất%20quả%20đất%20để%20bạn%20comment%20dạo%20thả%20ga%20-%20BlogAnChoi.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="400.0" layoutY="246.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="14.0">
+               <image>
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/07120b20-1019-46c3-9c8e-a987d37b6f47.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="14.0" layoutY="251.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/45%20hình%20ảnh%20về%20mèo%20cute,%20mèo%20ngáo,%20mèo%20láo%20-%20Tạo%20Ảnh%20Đẹp.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="90.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/a4cea0b0-2e11-4d05-ad5a-4cbfb798cfee.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button layoutX="601.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="45.0" styleClass="btexit">
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/Free%20Exit%20Logout%20PNG,%20SVG%20Icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
 </AnchorPane>

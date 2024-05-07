@@ -212,3 +212,15 @@ btstart {
     -fx-background-radius: 8px 8px 8px 8px;
     -fx-border-color: transparent;
 }
+.anchorPane3{
+    -fx-background-color: #6766ca;
+    -fx-background-radius: 8px 8px 8px 8px;
+    -fx-border-color: transparent;
+}
+.panegame{
+    -fx-background-color: white;
+    -fx-background-radius: 10px 10px 10px 10px;
+    -fx-border-color: transparent;
+    -fx-border-width: 7px 7px 7px 7px;
+    -fx-border-radius: 10px 10px 10px 10px;
+}
