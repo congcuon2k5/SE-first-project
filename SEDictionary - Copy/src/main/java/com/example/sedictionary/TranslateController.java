@@ -33,16 +33,6 @@ public class TranslateController extends mainSence {
         super.quayLaiTrangChinh(mouseEvent);
     }
 
-    @Override
-    public void chuyenSangPractice(ActionEvent actionEvent) throws IOException {
-        super.chuyenSangPractice(actionEvent);
-    }
-
-    @Override
-    public void chuyenSangAbout(ActionEvent actionEvent) throws IOException {
-        super.chuyenSangAbout(actionEvent);
-    }
-
     @FXML
     private TextArea search;
     @FXML

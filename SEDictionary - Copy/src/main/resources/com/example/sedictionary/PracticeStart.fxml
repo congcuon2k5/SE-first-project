@@ -13,11 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sedictionary.PracticeStartController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane layoutX="-10.0" prefHeight="570.0" prefWidth="226.0" styleClass="pane">
             <children>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" onAction="#chuyenSangTraTu" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -25,7 +25,7 @@
                         <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" onAction="#chuyenSangTranslate" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -41,7 +41,7 @@
                         <FontAwesomeIcon glyphName="GAMEPAD" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" text="" />
                     </graphic>
                 </Button>
-                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" onMouseClicked="#quayLaiTrangChinh" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
+                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
@@ -49,7 +49,7 @@
                         <FontAwesomeIcon fill="#daba88" glyphName="HOME" selectionFill="#fdf8f8" size="25" tabSize="0" text="" />
                     </graphic>
                 </Label>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="456.0" mnemonicParsing="false" onAction="#chuyenSangAbout" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="About">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="456.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="About">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -57,7 +57,7 @@
                         <FontAwesomeIcon glyphName="USERS" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" onAction="#chuyenSangThemBotTu" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -67,7 +67,7 @@
                 </Button>
             </children>
         </Pane>
-        <AnchorPane layoutX="214.0" layoutY="3.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
+        <AnchorPane layoutX="216.0" prefHeight="570.0" prefWidth="572.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="216.0" AnchorPane.rightAnchor="12.0">
             <children>
                 <VBox layoutX="28.0" prefHeight="141.0" prefWidth="516.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
                     <children>
@@ -95,37 +95,37 @@
                         </Label>
                     </children>
                 </VBox>
-                <HBox layoutX="14.0" layoutY="212.0" prefHeight="300.0" prefWidth="540.0" styleClass="hboxgame">
-                    <children>
-                        <ImageView fitHeight="300.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../../../../java/Picture/377208208_318558817739521_5846789676218966489_n.jpg" />
-                            </image>
-                        </ImageView>
-                        <Separator orientation="VERTICAL" prefHeight="300.0" prefWidth="50.0" />
-                        <Pane prefHeight="300.0" prefWidth="204.0">
-                            <HBox.margin>
-                                <Insets left="25.0" />
-                            </HBox.margin>
-                            <children>
-                                <Label alignment="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="80.0" prefWidth="137.0" styleClass="labelrule" text="Luật chơi">
-                                    <font>
-                                        <Font name="Constantia" size="25.0" />
-                                    </font>
-                                    <padding>
-                                        <Insets left="10.0" />
-                                    </padding>
-                                </Label>
-                                <Label layoutX="-48.0" layoutY="70.0" prefHeight="80.0" prefWidth="267.0" styleClass="label3" text="Điền từ tiếng anh thích hợp theo hình mẫu">
-                                    <font>
-                                        <Font size="14.0" />
-                                    </font>
-                                </Label>
-                                <Button layoutX="34.0" layoutY="188.0" mnemonicParsing="false" onAction="#start" prefHeight="35.0" prefWidth="137.0" styleClass="btstartgame" text="Start" />
-                            </children>
-                        </Pane>
-                    </children>
-                </HBox>
+            <HBox layoutX="14.0" layoutY="205.0" prefHeight="327.0" prefWidth="545.0" styleClass="hboxgame">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../../../../Users/PC/Downloads/9348f81a-8f69-4eb3-aee0-0a526a8ffd41.jpg" />
+                     </image>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="300.0" prefWidth="50.0" />
+                  <Pane prefHeight="300.0" prefWidth="204.0">
+                     <HBox.margin>
+                        <Insets left="25.0" />
+                     </HBox.margin>
+                     <children>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="80.0" prefWidth="137.0" styleClass="labelrule" text="Luật chơi">
+                           <font>
+                              <Font name="Constantia" size="25.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="-48.0" layoutY="70.0" prefHeight="80.0" prefWidth="267.0" styleClass="label3" text="Điền từ tiếng anh thích hợp theo hình mẫu">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="34.0" layoutY="188.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="137.0" styleClass="btstartgame" text="Start" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
             </children>
         </AnchorPane>
     </children>

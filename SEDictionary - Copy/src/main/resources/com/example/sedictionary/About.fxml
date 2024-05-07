@@ -11,11 +11,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sedictionary.AboutContronller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="570.0" prefWidth="800.0" styleClass="root" stylesheets="@../../../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <Pane layoutX="-10.0" prefHeight="570.0" prefWidth="226.0" styleClass="pane">
             <children>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" onAction="#chuyenSangTraTu" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="118.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Dictionary" textFill="WHITE">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -23,7 +23,7 @@
                         <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" onAction="#chuyenSangTranslate" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -31,7 +31,7 @@
                         <FontAwesomeIcon glyphName="EXCHANGE" selectionFill="#e2dede" styleClass="fonticon" tabSize="30" text="" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="296.0" mnemonicParsing="false" onAction="#chuyenSangPractice" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Practice">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="296.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Practice">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -39,7 +39,7 @@
                         <FontAwesomeIcon glyphName="GAMEPAD" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" text="" />
                     </graphic>
                 </Button>
-                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" onMouseClicked="#quayLaiTrangChinh" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
+                <Label alignment="CENTER" layoutX="15.0" layoutY="28.0" prefHeight="80.0" prefWidth="196.0" text="My E-Learning" textAlignment="CENTER">
                     <font>
                         <Font name="Comic Sans MS" size="24.0" />
                     </font>
@@ -55,7 +55,7 @@
                         <FontAwesomeIcon glyphName="USERS" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" />
                     </graphic>
                 </Button>
-                <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" onAction="#chuyenSangThemBotTu" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
+                <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
                     <font>
                         <Font name="Century" size="18.0" />
                     </font>
@@ -65,7 +65,7 @@
                 </Button>
             </children>
         </Pane>
-        <AnchorPane layoutX="214.0" layoutY="3.0" prefHeight="570.0" prefWidth="550.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
+        <AnchorPane layoutX="214.0" layoutY="3.0" prefHeight="570.0" prefWidth="800.0" style="-fx-background-color: #f3f3f3;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="214.0" AnchorPane.rightAnchor="14.0">
             <children>
                 <VBox layoutX="28.0" prefHeight="145.0" prefWidth="516.0" styleClass="vbox" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0">
                     <children>
@@ -110,17 +110,17 @@
             </Label>
             <ImageView fitHeight="215.0" fitWidth="165.0" layoutX="14.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="148.0">
                <image>
-                  <Image url="@../../../../java/Picture/z5418484109977_f6a00abe26235e6b09d80d01b00b4260.jpg" />
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/z5418484109977_f6a00abe26235e6b09d80d01b00b4260.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="230.0" fitWidth="170.0" layoutX="388.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="150.86111450195312">
                <image>
-                  <Image url="@../../../../java/Picture/df585283-0318-4833-85b2-2187a07d15a8.jpg" />
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/df585283-0318-4833-85b2-2187a07d15a8.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="169.0" fitWidth="185.0" layoutX="222.0" layoutY="255.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="146.0">
                <image>
-                  <Image url="@../../../../java/Picture/z5418359158517_44865697058a127addab2c91cfc05976.jpg" />
+                  <Image url="@../../../../../../../../../../Users/PC/Downloads/z5418359158517_44865697058a127addab2c91cfc05976.jpg" />
                </image>
             </ImageView>
             <Label alignment="CENTER" layoutX="173.0" layoutY="166.0" prefHeight="55.0" prefWidth="226.0" styleClass="label4" text="SE TEAM">

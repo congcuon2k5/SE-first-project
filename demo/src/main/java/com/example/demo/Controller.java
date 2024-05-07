@@ -38,8 +38,8 @@ public class Controller {
     public void initialize() {
         imageWordMap = new HashMap<>();
 
-        imageWordMap.put("Image/animal/zebra.jpg", "zebra");
-        /*imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\animal\\cat.jpg", "cat");
+        imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\animal\\zebra.jpg", "zebra");
+        imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\animal\\cat.jpg", "cat");
         imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\animal\\rabbit.jpg", "rabbit");
         imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\animal\\camel.jpg", "camel");
         imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\animal\\sheep.jpg", "sheep");
@@ -70,7 +70,7 @@ public class Controller {
         imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\colors and shapes\\oval.jpg", "oval");
         imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\colors and shapes\\crescent.jpg", "crescent");
         imageWordMap.put("C:\\Code\\SE-first-project\\demo\\src\\main\\resources\\com\\example\\demo\\Image\\colors and shapes\\cone.jpg", "cone");
-*/
+
         loadRandomImage();
 
         wordField.setOnKeyPressed(event -> {
