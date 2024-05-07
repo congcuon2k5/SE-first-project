@@ -22,7 +22,7 @@
                   <FontAwesomeIcon glyphName="HOME" selectionFill="#e2dede" size="15" styleClass="fonticon" text="" />
                </graphic>
             </Button>
-            <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Translate">
+            <Button alignment="CENTER" layoutX="39.0" layoutY="207.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="bttranslate" text="Translate">
                <font>
                   <Font name="Century" size="18.0" />
                </font>
@@ -54,7 +54,7 @@
                   <FontAwesomeIcon glyphName="USERS" selectionFill="#e2dede" size="15" styleClass="fonticon" tabSize="0" />
                </graphic>
             </Button>
-            <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="btfix" text="Fix">
+            <Button alignment="CENTER" layoutX="39.0" layoutY="377.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="148.0" styleClass="button1" text="Fix">
                <font>
                   <Font name="Century" size="18.0" />
                </font>
