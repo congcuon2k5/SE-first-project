@@ -140,7 +140,7 @@ btstart {
     -fx-background-color: white;
     -fx-background-radius: 10px 10px 10px 10px;
     -fx-border-color: transparent;
-    -fx-border-width: 5px 5px 5px 5px;
+    -fx-border-width: 10px 10px 10px 10px;
 }
 .labelrule {
     -fx-background-color: white;
