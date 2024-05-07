@@ -159,26 +159,18 @@ public class ReadFileController extends mainSence {
         try {
             String word = tuDaTra;
             System.setProperty(
-                    "freetts.voices",
-                    "com.sun.speech.freetts.en.us"
-                            + ".cmu_us_kal.KevinVoiceDirectory");
+                    "freetts.voices", "com.sun.speech.freetts.en.us" + ".cmu_us_kal.KevinVoiceDirectory");
             Central.registerEngineCentral(
-                    "com.sun.speech.freetts"
-                            + ".jsapi.FreeTTSEngineCentral");
-            Synthesizer synthesizer
-                    = Central.createSynthesizer(
-                    new SynthesizerModeDesc(Locale.US));
+                    "com.sun.speech.freetts" + ".jsapi.FreeTTSEngineCentral");
+            Synthesizer synthesizer = Central.createSynthesizer(new SynthesizerModeDesc(Locale.US));
             synthesizer.allocate();
             synthesizer.resume();
-            synthesizer.speakPlainText(
-                    word, null);
-            synthesizer.waitEngineState(
-                    Synthesizer.QUEUE_EMPTY);
+            synthesizer.speakPlainText(word, null);
+            synthesizer.waitEngineState(Synthesizer.QUEUE_EMPTY);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-
 
     public void hienThongBaoNhapSaiTu() {
         Alert thongBao = new Alert(Alert.AlertType.CONFIRMATION);
