@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="556e3118-50a0-4e73-adb3-98ddc4ee3629" name="Changes" comment="" />
+    <list default="true" id="556e3118-50a0-4e73-adb3-98ddc4ee3629" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/java/com/example/sedictionary/gameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/java/com/example/sedictionary/ReadFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/java/com/example/sedictionary/ReadFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/java/com/example/sedictionary/mainSence.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/java/com/example/sedictionary/mainSence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/resources/com/example/sedictionary/My E-learning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/../SEDictionary - Copy/src/main/resources/com/example/sedictionary/My E-learning.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demo/src/main/java/com/example/demo/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/../demo/src/main/java/com/example/demo/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +21,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2fuB6t35fE72w6t2wTfHgKEDXjT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -22,7 +34,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/PV/IdeaProjects/cloneSE/SE-first-project/demo1"
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PV/IdeaProjects/cloneSE/SE-first-project/SEDictionary - Copy"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

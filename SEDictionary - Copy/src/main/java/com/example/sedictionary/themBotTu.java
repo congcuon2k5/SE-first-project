@@ -28,6 +28,16 @@ public class themBotTu extends mainSence {
         super.quayLaiTrangChinh(mouseEvent);
     }
 
+    @Override
+    public void chuyenSangPractice(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangPractice(actionEvent);
+    }
+
+    @Override
+    public void chuyenSangAbout(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangAbout(actionEvent);
+    }
+
     @FXML
     private TextField tuCanSua;
     @FXML
@@ -150,7 +160,7 @@ public class themBotTu extends mainSence {
 
     public boolean kiemTraCoHayKhong() throws IOException{
         String tu = tuCanSua.getText();
-        if(!((EngData.get(tu) == null) && (VieData.get(tu) == null))) {
+        if(!((EngData.get(tu) == null) && (VieData.get(tu) == null) && (listThem.get(tu) == null))) {
             return false;
         }
         return true;
