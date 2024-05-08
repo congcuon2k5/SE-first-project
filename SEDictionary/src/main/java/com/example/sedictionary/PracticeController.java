@@ -122,7 +122,7 @@ public class PracticeController extends mainSence {
             thongBaoHoanThanh.setTitle("complete");
             thongBaoHoanThanh.setHeaderText("You have completed the game!\n" + "Number of correct answers is: " + soCauDung + "\n" + "number of incorrect answers is: " + soCauSai);
             thongBaoHoanThanh.setContentText("Do you want to play again?");
-            ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("com/example/sedictionary/Picture/377208208_318558817739521_5846789676218966489_n.jpg")));
+            ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("Picture/377208208_318558817739521_5846789676218966489_n.jpg")));
 
             // Thiết lập kích thước cho ImageView nếu cần
             imageView.setFitWidth(50); // Thiết lập chiều rộng tùy ý
