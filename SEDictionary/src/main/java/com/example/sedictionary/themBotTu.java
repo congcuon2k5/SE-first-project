@@ -3,92 +3,251 @@ package com.example.sedictionary;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.web.WebView;
-import javafx.stage.Stage;
+import javafx.scene.web.HTMLEditor;
 
 import java.io.*;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class themBotTu extends mainSence {
-    public void quayLaiTrangChinh(ActionEvent actionEvent) throws IOException {
-        Parent a = FXMLLoader.load(getClass().getResource("manHinhChinh.fxml"));
-        Stage b = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        Scene c = new Scene(a);
-        b.setScene(c);
-        b.show();
-    }
-    @FXML
-    private TextField tuCanThem;
-    @FXML
-    private TextField nghiaCuaTuCanThem;
-
-    /**
-     * hàm để khi nhấn button thêm từ thì nó sẽ thêm từ vào list đồng thời ghi vào trong file để lưu từ đó.
-     * @param actionEvent an
-     * @throws IOException an
-     */
-    public void themTu2(ActionEvent actionEvent) throws IOException {
-        docFile();
-        listThem.put(tuCanThem.getText(), nghiaCuaTuCanThem.getText());
-        danhSachTuDuocThem.getItems().clear(); //xóa list trước
-        danhSachTuDuocThem.getItems().addAll((Collection<? extends String>) listThem.keySet()); //hiện full list trên lisview
-        FileWriter fr = new FileWriter("data/testThemTu.txt", true);
-        BufferedWriter br = new BufferedWriter(fr);
-        br.write(tuCanThem.getText() + "<html>" + nghiaCuaTuCanThem.getText() + "\n"); //viết vào file thêm từ để lưu
-        br.close();
-        fr.close();
+    @Override
+    public void chuyenSangTraTu(ActionEvent event) throws IOException {
+        super.chuyenSangTraTu(event);
     }
 
-    /**
-     * hàm để khi nhấn button xóa từ thì sẽ xóa từ đã được click chuột trên listview trong list và cả trong file.
-     * @param actionEvent fg
-     * @throws IOException f
-     */
-    public void xoaTu2(ActionEvent actionEvent) throws IOException {
-        String s = danhSachTuDuocThem.getSelectionModel().getSelectedItem();
-        listThem.remove(s);
-        danhSachTuDuocThem.getItems().clear(); //xóa list trước
-        danhSachTuDuocThem.getItems().addAll((Collection<? extends String>) listThem.keySet()); //hiện full list trên lisview
-        nghiamoi.getEngine().load(null);
-        FileReader fr = new FileReader("data/testThemTu.txt");
-        BufferedReader br = new BufferedReader(fr);
-        List<String> dong = new ArrayList<>();
-        String line;
-        while ((line = br.readLine() ) != null){
-            if(line.startsWith(s + "<html>")){
-                continue;
-            } else dong.add(line);
-        } //tạo 1 list mới ghi hết các donhf trừ dòng đã xóa, sau đó thay vào file để xóa từ cần xóa
-        fr.close();
-        br.close();
+    @Override
+    public void chuyenSangTranslate(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangTranslate(actionEvent);
+    }
 
-        FileWriter fw = new FileWriter("data/testThemTu.txt");
-        BufferedWriter bw = new BufferedWriter(fw);
-        for (String n : dong){
-            bw.write(n + "\n");
+    @Override
+    public void quayLaiTrangChinh(MouseEvent mouseEvent) throws IOException {
+        super.quayLaiTrangChinh(mouseEvent);
+    }
+
+    @Override
+    public void chuyenSangPractice(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangPractice(actionEvent);
+    }
+
+    @Override
+    public void chuyenSangAbout(ActionEvent actionEvent) throws IOException {
+        super.chuyenSangAbout(actionEvent);
+    }
+
+    @FXML
+    private TextField tuCanSua;
+    @FXML
+    private HTMLEditor suaTu;
+    @FXML
+    private ListView<String> listTuCanSua;
+
+
+    public void searchWordThatNeedToFix(KeyEvent keyEvent) {
+        String tu = tuCanSua.getText();
+        if (tu.isEmpty()) {
+            listTuCanSua.setVisible(false);
+        } else {
+            listTuCanSua.setVisible(true);
+            listTuCanSua.getItems().clear();
+            List<String> collect = (List<String>) EngData.keySet().stream().filter(EngData -> EngData.startsWith(tu)).collect(Collectors.toList());
+            List<String> collect1 = (List<String>) VieData.keySet().stream().filter(VieData -> VieData.startsWith(tu)).collect(Collectors.toList());
+            List<String> collect2 = (List<String>) listThem.keySet().stream().filter(listThem -> listThem.startsWith(tu)).collect(Collectors.toList());
+            listTuCanSua.getItems().addAll(collect);
+            listTuCanSua.getItems().addAll(collect1);
+            listTuCanSua.getItems().addAll(collect2);
+            if(collect1.isEmpty() && collect.isEmpty() && collect2.isEmpty()){
+                listTuCanSua.setVisible(false);
+            }
         }
-        bw.close();
-        fw.close();
     }
 
-    /**
-     * hàm chọn từ trên listview để xóa.
-     * @param mouseEvent an
-     */
-    public void chooseWord(MouseEvent mouseEvent){
-        danhSachTuDuocThem.getSelectionModel().selectedItemProperty().addListener(
+    public void chonTuDeSua(MouseEvent mouseEvent){
+        listTuCanSua.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> {
-                    String selectedWord = listThem.get(newValue.trim());
-                    nghiamoi.getEngine().loadContent(selectedWord, "text/html");
+                    if (newValue == null){
+                        return;
+                    }
+                    if (listThem.get(newValue.trim()) != null) {
+                        String selectedWord = listThem.get(newValue.trim());
+                        suaTu.setHtmlText(selectedWord);
+                        tuCanSua.setText(newValue.trim());
+                    } else if (EngData.get(newValue.trim()) != null) {
+                        String selectedWord = EngData.get(newValue.trim());
+                        suaTu.setHtmlText(selectedWord);
+                        tuCanSua.setText(newValue.trim());
+                    } else if (VieData.get(newValue.trim()) != null) {
+                        String selectedWord = VieData.get(newValue.trim());
+                        suaTu.setHtmlText(selectedWord);
+                        tuCanSua.setText(newValue.trim());
+                    }
                 }
         );
+    }
+    public void save(ActionEvent actionEvent) throws IOException {
+        String tu = tuCanSua.getText();
+        if (kiemTraCoHayKhong()) {
+            Alert tuCanThemSai = new Alert(Alert.AlertType.CONFIRMATION);
+            tuCanThemSai.setTitle("Add new word");
+            tuCanThemSai.setHeaderText("");
+            tuCanThemSai.setContentText("Do you want to add new word to the dictionary");
+            Optional<ButtonType> ketQua = tuCanThemSai.showAndWait();
+            if (ketQua.get() == ButtonType.OK){
+                them();
+                listThem.put(tu, suaTu.getHtmlText());
+                return;
+            }
+        } else {
+            them();
+            listThem.put(tu, suaTu.getHtmlText());
+            return;
+        }
+    }
+
+    public void them() throws IOException{
+        String tu = tuCanSua.getText();
+        if (EngData.get(tu) != null) {
+            suaE_V();
+        } else if (VieData.get(tu) != null){
+            suaV_E();
+        } else {
+            BufferedWriter sua = new BufferedWriter(new FileWriter("data/ThemTu.txt", true));
+            sua.write(tu + "<html>" + suaTu.getHtmlText() + "\n");
+            sua.close();
+        }
+    }
+
+    public void suaE_V() throws IOException {
+        String tu = tuCanSua.getText();
+        BufferedReader a = new BufferedReader(new FileReader("data/E_V.txt"));
+        List<String> dong = new ArrayList<>();
+        String line;
+        while ((line = a.readLine()) != null) {
+            if (line.startsWith(tu + "<html>")) {
+                dong.add(tu + "<html>" + suaTu.getHtmlText());
+            } else dong.add(line);
+        }
+        a.close();
+
+        BufferedWriter sua = new BufferedWriter(new FileWriter("data/E_V.txt"));
+        for (String n : dong){
+            sua.write(n + "\n");
+        }
+        sua.close();
+    }
+
+    public void suaV_E() throws IOException {
+        String tu = tuCanSua.getText();
+        BufferedReader a = new BufferedReader(new FileReader("data/V_E.txt"));
+        List<String> dong = new ArrayList<>();
+        String line;
+        while ((line = a.readLine()) != null) {
+            if (line.startsWith(tu + "<html>")) {
+                dong.add(tu + "<html>" + suaTu.getHtmlText());
+            } else dong.add(line);
+        }
+        a.close();
+
+        BufferedWriter sua = new BufferedWriter(new FileWriter("data/V_E.txt"));
+        for (String n : dong){
+            sua.write(n + "\n");
+        }
+        sua.close();
+    }
+
+    public boolean kiemTraCoHayKhong() throws IOException{
+        String tu = tuCanSua.getText();
+        if(!((EngData.get(tu) == null) && (VieData.get(tu) == null) && (listThem.get(tu) == null))) {
+            return false;
+        }
+        return true;
+    }
+
+    public void delete(ActionEvent actionEvent) throws IOException{
+        if (kiemTraCoHayKhong()) {
+            Alert khongCoTuNay = new Alert(Alert.AlertType.ERROR);
+            khongCoTuNay.setTitle("ERROR");
+            khongCoTuNay.setHeaderText("This word doesn't exist in your dictionary!");
+            khongCoTuNay.show();
+            return;
+        }
+        Alert thongBaoXoaTu = new Alert(Alert.AlertType.CONFIRMATION);
+        thongBaoXoaTu.setTitle("Delete word");
+        thongBaoXoaTu.setHeaderText("Do you want to delete this word?");
+        thongBaoXoaTu.setContentText("Once deleted, you will not be able to look up this word again!");
+        Optional<ButtonType> xoa = thongBaoXoaTu.showAndWait();
+        if (xoa.get() == ButtonType.OK) {
+            xoa();
+            if(EngData.get(tuCanSua.getText()) != null) {
+                EngData.remove(tuCanSua.getText());
+            }
+            if(VieData.get(tuCanSua.getText()) != null) {
+                VieData.remove(tuCanSua.getText());
+            }
+            if(listThem.get(tuCanSua.getText()) != null) {
+                listThem.remove(tuCanSua.getText());
+            }
+            tuCanSua.setText("");
+            suaTu.setHtmlText("");
+            listTuCanSua.getItems().clear();
+            listTuCanSua.setVisible(false);
+        }
+    }
+    public void xoa() throws IOException{
+        String tu = tuCanSua.getText();
+        if (listThem.get(tu) != null) {
+            BufferedReader a = new BufferedReader(new FileReader("data/E_V.txt"));
+            List<String> dong = new ArrayList<>();
+            String line;
+            while ((line = a.readLine()) != null) {
+                if (line.startsWith(tu + "<html>")) {
+                    continue;
+                } else dong.add(line);
+            }
+            a.close();
+
+            BufferedWriter sua = new BufferedWriter(new FileWriter("data/E_V.txt"));
+            for (String n : dong){
+                sua.write(n + "\n");
+            }
+            sua.close();
+        }
+        if (EngData.get(tu) != null) {
+            BufferedReader a = new BufferedReader(new FileReader("data/E_V.txt"));
+            List<String> dong = new ArrayList<>();
+            String line;
+            while ((line = a.readLine()) != null) {
+                if (line.startsWith(tu + "<html>")) {
+                    continue;
+                } else dong.add(line);
+            }
+            a.close();
+
+            BufferedWriter sua = new BufferedWriter(new FileWriter("data/E_V.txt"));
+            for (String n : dong){
+                sua.write(n + "\n");
+            }
+            sua.close();
+        }
+        if (VieData.get(tu) != null){
+            BufferedReader a = new BufferedReader(new FileReader("data/V_E.txt"));
+            List<String> dong = new ArrayList<>();
+            String line;
+            while ((line = a.readLine()) != null) {
+                if (line.startsWith(tu + "<html>")) {
+                    continue;
+                } else dong.add(line);
+            }
+            a.close();
+
+            BufferedWriter sua = new BufferedWriter(new FileWriter("data/E_V.txt"));
+            for (String n : dong){
+                sua.write(n + "\n");
+            }
+            sua.close();
+        }
     }
 }
