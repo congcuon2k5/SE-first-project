@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
@@ -29,6 +30,8 @@ public class mainSence extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(mainSence.class.getResource("My E-learning.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
         stage.setTitle("SE team");
+        Image icon = new Image(getClass().getResourceAsStream("Picture/iconapp.jpg"));
+        stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
         docFileAnh();
