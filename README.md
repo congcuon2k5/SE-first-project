@@ -19,10 +19,7 @@ The application is designed to support learning English. The application is writ
 ![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20131916.png)
 
 ## UML diagram
-![UML diagram](
-
-## Inheritance tree
-![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20134252.png)
+![UML diagram](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20134252.png)
 
 ## Installation
 1. Clone the project from the repository.
@@ -31,12 +28,6 @@ The application is designed to support learning English. The application is writ
       + File ->  Project Structure -> Libraries -> ALt + Insert -> Choose Java -> Paste package "Lib" -> Choose "OK". 
 4. Run the project.
 5. If you want to change the data, you can change the E_V.txt and V_E.txt files.
-   
-## ScreenShots
-![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034735.png)
-![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034752.png)
-![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034820.png)
-![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034838.png)
 
 ## Usage
 1. Select mode: Select Start to open app.
@@ -61,6 +52,12 @@ The application is designed to support learning English. The application is writ
 
 ## Demo
 ![Demo](
+1. How to add Lib folder into the project
+![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034735.png)
+![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034752.png)
+![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034820.png)
+![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20034838.png)
+
 
 ## Future improvements
 1. Built-in dictionary with over 60,000 English words. 
