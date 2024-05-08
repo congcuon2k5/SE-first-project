@@ -117,26 +117,21 @@ public class PracticeController extends mainSence {
                     displayedImages.add(randomImagePath);
 
         } else {
-//            showAlert("Info", "You have completed the game!");
             Alert thongBaoHoanThanh = new Alert(Alert.AlertType.CONFIRMATION);
             thongBaoHoanThanh.setTitle("complete");
             thongBaoHoanThanh.setHeaderText("You have completed the game!\n" + "Number of correct answers is: " + soCauDung + "\n" + "number of incorrect answers is: " + soCauSai);
             thongBaoHoanThanh.setContentText("Do you want to play again?");
             ImageView imageView = new ImageView(new Image(getClass().getResourceAsStream("Picture/377208208_318558817739521_5846789676218966489_n.jpg")));
 
-            // Thiết lập kích thước cho ImageView nếu cần
-            imageView.setFitWidth(50); // Thiết lập chiều rộng tùy ý
-            imageView.setFitHeight(50); // Thiết lập chiều cao tùy ý
+            imageView.setFitWidth(50);
+            imageView.setFitHeight(50);
 
-            // Thiết lập hình ảnh tùy chỉnh cho Alert
             thongBaoHoanThanh.setGraphic(imageView);
             for (ButtonType buttonType : thongBaoHoanThanh.getButtonTypes()) {
                 Button button = (Button) thongBaoHoanThanh.getDialogPane().lookupButton(buttonType);
                 if (buttonType.getText().equals("OK")) {
-                    // Thay đổi văn bản của nút OK
                     button.setText("Yes");
                 } else if (buttonType.getText().equals("Cancel")) {
-                    // Thay đổi văn bản của nút Cancel
                     button.setText("No");
                 }
             }

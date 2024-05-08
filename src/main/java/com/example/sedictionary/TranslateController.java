@@ -1,5 +1,6 @@
 package com.example.sedictionary;
 
+import java.net.ConnectException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -9,6 +10,7 @@ import java.io.IOException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.KeyCode;
@@ -71,10 +73,18 @@ public class TranslateController extends mainSence {
     }
 
     public void trans() throws IOException, ParseException, InterruptedException {
-        String text = search.getText();
-        String translationResultt = translate(text);
-        translationResult.clear();
-        translationResult.setText(translationResultt);
+        try {
+            String text = search.getText();
+            String translationResultt = translate(text);
+            translationResult.clear();
+            translationResult.setText(translationResultt);
+        } catch (ConnectException connectException){
+            Alert thongBaoMang = new Alert(Alert.AlertType.ERROR);
+            thongBaoMang.setTitle("Error");
+            thongBaoMang.setHeaderText("Internet not connected");
+            thongBaoMang.setContentText("Checking your connection again and retry!");
+            thongBaoMang.show();
+        }
     }
 
     public void keyPressed(KeyEvent keyEvent) throws IOException, ParseException, InterruptedException {
