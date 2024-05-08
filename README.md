@@ -19,7 +19,7 @@ The application is designed to support learning English. The application is writ
 ![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20131916.png)
 
 ## UML diagram
-![UML diagram](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20134252.png)
+![UML diagram](https://github.com/congcuon2k5/SE-first-project/blob/main/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20134252.png)
 
 ## Installation
 1. Clone the project from the repository.
