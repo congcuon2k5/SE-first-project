@@ -199,7 +199,7 @@ public class themBotTu extends mainSence {
     public void xoa() throws IOException{
         String tu = tuCanSua.getText();
         if (listThem.get(tu) != null) {
-            BufferedReader a = new BufferedReader(new FileReader("data/E_V.txt"));
+            BufferedReader a = new BufferedReader(new FileReader("data/ThemTu.txt"));
             List<String> dong = new ArrayList<>();
             String line;
             while ((line = a.readLine()) != null) {
@@ -209,7 +209,7 @@ public class themBotTu extends mainSence {
             }
             a.close();
 
-            BufferedWriter sua = new BufferedWriter(new FileWriter("data/E_V.txt"));
+            BufferedWriter sua = new BufferedWriter(new FileWriter("data/ThemTu.txt"));
             for (String n : dong){
                 sua.write(n + "\n");
             }
@@ -243,7 +243,7 @@ public class themBotTu extends mainSence {
             }
             a.close();
 
-            BufferedWriter sua = new BufferedWriter(new FileWriter("data/E_V.txt"));
+            BufferedWriter sua = new BufferedWriter(new FileWriter("data/V_E.txt"));
             for (String n : dong){
                 sua.write(n + "\n");
             }

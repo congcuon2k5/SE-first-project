@@ -94,7 +94,6 @@ public class PracticeController extends mainSence {
                 checkWord(null);
             }
         });
-        System.out.println("....");
     }
 
     private void loadRandomImage() {

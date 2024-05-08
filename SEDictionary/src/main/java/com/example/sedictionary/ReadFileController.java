@@ -150,8 +150,6 @@ public class ReadFileController extends mainSence {
         );
     }
 
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-    }
     public void kiemTraCoPhaiTuTiengAnhKhong(){
         if (tuCanTra == null) {
             PhatAm.setVisible(false);
