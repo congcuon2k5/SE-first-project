@@ -22,7 +22,8 @@ The application is designed to support learning English. The application is writ
 ![UML diagram](
 
 ## Inheritance tree
-![image](
+![image](https://github.com/congcuon2k5/SE-first-project/blob/main/SEDictionary/src/main/resources/com/example/sedictionary/Picture/Screenshot%202024-05-08%20134252.png)
+
 ## Installation
 1. Clone the project from the repository.
 2. Open the project in the IDE.
